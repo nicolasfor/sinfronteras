@@ -14,7 +14,7 @@ const Modal = ({ id, title, image, children }) => {
                         <div className="row">
                             <div className="col-lg-12 mx-auto">
                                 <div className="modal-body">
-                                    <h2 className="text-uppercase text-wrap">{title}</h2>
+                                    <h2 className="text-uppercase text-wrap text-truncate">{title}</h2>
                                     <div className="row">
                                         <div className="col-md-6">
                                             <img className="img-fluid d-block mx-auto" src={image} alt="" />

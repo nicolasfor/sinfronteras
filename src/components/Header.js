@@ -4,7 +4,7 @@ import HeaderImage from '../assets/img/logos/main.png'
 
 const Header = ({ goTo }) => {
 
-    const handleScroll = (event)=>{
+    const handleScroll = (event) => {
         if (window.$("#mainNav").offset().top > 100) {
             window.$("#mainNav").addClass("navbar-shrink");
         } else {
@@ -54,7 +54,7 @@ const Header = ({ goTo }) => {
                     <div className="intro-text">
                         <div className="intro-lead-in">Bienvenido a nuestro portafolio!</div>
                         <div className="intro-heading text-uppercase">Un placer conocerte</div>
-                        <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#start">Cuentame más</a>
+                        <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" onClick={() => goTo('start')} href="#start">Cuentame más</a>
                     </div>
                 </div>
             </header>

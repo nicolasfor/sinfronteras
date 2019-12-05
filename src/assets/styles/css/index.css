@@ -232,7 +232,8 @@ header.masthead {
 .portfolio-modal .modal-dialog {
   margin: auto;
   max-width: 80vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-top: 50px; }
 
 .portfolio-modal .modal-content {
   padding: 50px 0;
@@ -287,6 +288,11 @@ header.masthead {
       -ms-transform: rotate(90deg);
       transform: rotate(90deg);
       background-color: #212529; }
+
+@media (max-width: 576px) {
+  .portfolio-modal > .modal-dialog {
+    max-width: 95vw;
+    margin: auto; } }
 
 .img-fluid-thumbnail {
   height: 250px;
