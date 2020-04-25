@@ -1,11 +1,19 @@
 import React, { useEffect } from 'react';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+
 import Header from './Header'
 import Intro from './Intro'
+import Articles from './Articles'
 import SectionWeDo from './SectionWeDo'
 import SectionTeam from './SectionTeam'
 import SectionContact from './SectionContact'
 import Footer from './Footer'
+import NavBar from './NavBar';
 
 const Main = () => {
 
@@ -21,27 +29,26 @@ const Main = () => {
         });
     });
 
-    const goTo = (tab) => {
-        const target = tab && window.$(`#${tab}`);
-        let scrollTop = 0;
-        if (target) {
-            scrollTop = (target.offset().top - 54);
-        }
-        window.$('html, body').animate({
-            scrollTop
-        }, 1000, "easeInOutExpo");
-    }
+
     return (
-        <>
-            <Header goTo={goTo} />
-            <Intro />
-
-            <SectionWeDo />
-            <SectionTeam />
-            <SectionContact />
+        <Router>
+            <NavBar />
+            <Switch>
+                <Route path="/articles">
+                    <Articles />
+                </Route>
+                <Route path="/">
+                    <>
+                        <Header />
+                        <Intro />
+                        <SectionWeDo />
+                        <SectionTeam />
+                        <SectionContact />
+                    </>
+                </Route>
+            </Switch>
             <Footer />
-
-        </>
+        </Router>
     );
 };
 

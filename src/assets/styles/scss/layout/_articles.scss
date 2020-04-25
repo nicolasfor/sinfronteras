@@ -1,0 +1,27 @@
+.black-section {
+    background-color: #212529;
+    height: 104px;
+}
+
+.articles-container {
+    height: 100vh;
+    padding: 20px 0;
+    margin: 0 1rem;
+
+    .articles-list,
+    .articles-content {
+        height: 75vh;
+    }
+
+    .articles-list{
+        overflow: hidden;
+        .list-group{
+            height: 60vh;
+            overflow: auto;
+        }
+    }
+    .articles-content {
+        overflow: auto;
+    }
+
+}

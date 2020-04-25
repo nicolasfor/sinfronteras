@@ -169,6 +169,25 @@ header.masthead {
       margin-bottom: 50px;
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; } }
 
+.black-section {
+  background-color: #212529;
+  height: 104px; }
+
+.articles-container {
+  height: 100vh;
+  padding: 20px 0;
+  margin: 0 1rem; }
+  .articles-container .articles-list,
+  .articles-container .articles-content {
+    height: 75vh; }
+  .articles-container .articles-list {
+    overflow: hidden; }
+    .articles-container .articles-list .list-group {
+      height: 60vh;
+      overflow: auto; }
+  .articles-container .articles-content {
+    overflow: auto; }
+
 .service-heading {
   margin: 15px 0;
   text-transform: none; }
