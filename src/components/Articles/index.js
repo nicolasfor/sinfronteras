@@ -1,55 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import {
-    Stitch,
-    AnonymousCredential,
-    RemoteMongoClient
-} from "mongodb-stitch-browser-sdk";
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom'
+
 import List from './List';
 import Content from './Content';
-
-const client = Stitch.initializeDefaultAppClient('asf-ewvhw');
-
-const db = client.getServiceClient(RemoteMongoClient.factory, 'asf-service').db('asf');
+import useArticles from '../../modules/articles/useHook';
 
 const Articles = () => {
 
-    const [articles, setArticles] = useState({});
-    const [currentArticle, setCurrentArticle] = useState([]);
+    let params = useParams()
+    const [{ selected }, { dispatchLoadCategories,dispatchLoadArticleById }] = useArticles();
     useEffect(() => {
-        client.auth.loginWithCredential(new AnonymousCredential())
-            .then(() =>
-                db.collection('articles').find({}, { limit: 100 }).asArray()
-            ).then(docs => {
-                const obj = {}
-                docs.forEach((doc, index) => {
-                    if (index === 0) {
-                        setCurrentArticle(doc)
-                    }
-                    obj[doc._id] = doc
-                })
-                setArticles(obj);
-            }).catch(err => {
-                console.error(err)
-            });
+        dispatchLoadCategories();
+        if (params && params.id) {
+            dispatchLoadArticleById(params.id)
+        }
+        // eslint-disable-next-line
     }, [])
-
-    const onSelect = (id) => {
-        setCurrentArticle(articles[id]);
-    }
 
     return (
         <>
             <div className="black-section" />
             <section className="articles-container row">
-                <div class="col-sm-12 col-md-4">
-                    <List
-                        onSelect={onSelect}
-                        articles={articles}
-                        selected={currentArticle && currentArticle._id} />
+                <div className={`col-sm-12 ${selected ? 'col-md-4' : 'col-md-12'}`}>
+                    <List />
                 </div>
-                <div class="col-sm-12 col-md-8">
-                    <Content article={currentArticle} />
-                </div>
+                {selected &&
+                    <div className="col-sm-12 col-md-8">
+                        <Content />
+                    </div>
+                }
             </section>
         </>
     )

@@ -1,16 +1,19 @@
 import React from 'react';
+import useArticles from '../../modules/articles/useHook';
 
-const Content = ({ article }) => {
+const Content = () => {
 
-    if (!article) {
+    const [{ selected }] = useArticles();
+
+    if (!selected) {
         return null;
     }
-    const { title, content } = article;
+    const { title, content } = selected;
     return (
-        <div class="card articles-content">
-            <div class="card-body">
-                <h5 class="card-title">{title}</h5>
-                <p class="card-text">{content}</p>
+        <div className="card articles-content">
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{content}</p>
             </div>
         </div>
     )

@@ -17,7 +17,7 @@ const NavBar = () => {
     }
 
     const handleScroll = (event) => {
-        if (window.$("#mainNav").offset().top > 100) {
+        if (window.$("#mainNav").offset().top > 20) {
             window.$("#mainNav").addClass("navbar-shrink");
         } else {
             window.$("#mainNav").removeClass("navbar-shrink");
@@ -43,10 +43,8 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav text-uppercase ml-auto">
-                            <li className="nav-item d-flex align-items-center">
-                                <span class="badge badge-warning">
-                                    <Link className="nav-link js-scroll-trigger" to="/articles">Novedades</Link>
-                                </span>
+                            <li className="nav-item">
+                                <Link className="nav-link js-scroll-trigger articles-nav" to="/articles">Artículos</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" onClick={() => goTo('start')} href="#start">Quienes somos</a>

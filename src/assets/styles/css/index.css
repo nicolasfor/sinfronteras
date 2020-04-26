@@ -78,6 +78,8 @@ img::-moz-selection {
 #mainNav {
   background-color: #212529; }
   #mainNav .navbar-toggler {
+    width: 100%;
+    margin: 1rem;
     font-size: 12px;
     right: 0;
     padding: 13px;
@@ -91,15 +93,21 @@ img::-moz-selection {
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
       color: #fec503; }
-  #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 90%;
-    font-weight: 400;
-    padding: 0.75em 0;
-    letter-spacing: 1px;
-    color: white;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
-    #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-      color: #fed136; }
+  #mainNav .navbar-nav {
+    text-align: center; }
+    #mainNav .navbar-nav .nav-item .nav-link {
+      font-size: 90%;
+      font-weight: 400;
+      padding: 0.75em 0;
+      letter-spacing: 1px;
+      color: white;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
+      #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: #fed136; }
+    #mainNav .navbar-nav .nav-item .articles-nav {
+      color: #085cf3; }
+      #mainNav .navbar-nav .nav-item .articles-nav:hover {
+        color: #fed136; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -174,7 +182,6 @@ header.masthead {
   height: 104px; }
 
 .articles-container {
-  height: 100vh;
   padding: 20px 0;
   margin: 0 1rem; }
   .articles-container .articles-list,
@@ -183,10 +190,19 @@ header.masthead {
   .articles-container .articles-list {
     overflow: hidden; }
     .articles-container .articles-list .list-group {
-      height: 60vh;
+      height: 55vh;
       overflow: auto; }
   .articles-container .articles-content {
     overflow: auto; }
+
+.input-group-append {
+  cursor: pointer; }
+
+@media (max-width: 992px) {
+  .articles-container {
+    flex-flow: wrap-reverse; }
+    .articles-container .articles-content {
+      margin: 2rem 0; } }
 
 .service-heading {
   margin: 15px 0;
@@ -539,3 +555,15 @@ ul.social-buttons {
     background-color: #212529; }
     ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
       background-color: #fed136; }
+
+.loading-component {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(236, 214, 138, 0.5);
+  z-index: 1000 !important; }

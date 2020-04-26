@@ -14,8 +14,11 @@ import SectionTeam from './SectionTeam'
 import SectionContact from './SectionContact'
 import Footer from './Footer'
 import NavBar from './NavBar';
+import useArticles from '../modules/articles/useHook';
 
 const Main = () => {
+
+    const { dispatchLoadCategories } = useArticles()[1];
 
     useEffect(() => {
         // Activate scrollspy to add active class to navbar items on scroll
@@ -29,12 +32,17 @@ const Main = () => {
         });
     });
 
+    useEffect(() => {
+        dispatchLoadCategories();
+        // eslint-disable-next-line
+    }, [])
+
 
     return (
-        <Router>
+        <Router basename="#">
             <NavBar />
             <Switch>
-                <Route path="/articles">
+                <Route path="/articles/:id?">
                     <Articles />
                 </Route>
                 <Route path="/">

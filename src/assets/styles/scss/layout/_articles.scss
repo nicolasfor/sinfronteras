@@ -4,7 +4,6 @@
 }
 
 .articles-container {
-    height: 100vh;
     padding: 20px 0;
     margin: 0 1rem;
 
@@ -16,7 +15,7 @@
     .articles-list{
         overflow: hidden;
         .list-group{
-            height: 60vh;
+            height: 55vh;
             overflow: auto;
         }
     }
@@ -24,4 +23,17 @@
         overflow: auto;
     }
 
+}
+
+.input-group-append{
+    cursor: pointer;
+}
+
+@media(max-width:992px) {
+    .articles-container{
+        flex-flow: wrap-reverse;
+        .articles-content{
+            margin: 2rem 0;
+        }
+    }
 }
