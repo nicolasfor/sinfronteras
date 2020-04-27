@@ -32,7 +32,8 @@ export const fetchArticlesByString = async (str) => {
             },
             {
                 projection: {
-                    title: 1
+                    title: 1,
+                    subtitle: 1
                 },
                 sort: {
                     views: -1
