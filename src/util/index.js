@@ -16,25 +16,30 @@ const loginStitch = async () => {
 
 export const fetchArticleById = async (id) => {
     await loginStitch();
-    const docs = await db.collection('articles').find({ _id: new BSON.ObjectId(id) }).asArray();
-    return docs.length > 0 ? { ...docs[0], _id: String(docs[0]._id) } : null;
+    const doc = await client.callFunction('getArticleById', [id]);
+    return doc ? { ...doc, _id: String(doc._id) } : null;
 };
 
 export const fetchArticlesByString = async (str) => {
     await loginStitch();
-    const docs = await db.collection('articles').find(
-        {
-            $or: [
-                { "title": new RegExp(str, "i") },
-                { "content": new RegExp(str, "i") },
-            ]
-        },
-        {
-            projection: {
-                title: 1
+    const docs = await db.collection('articles')
+        .find(
+            {
+                $or: [
+                    { "title": new RegExp(str, "i") },
+                    { "content": new RegExp(str, "i") },
+                ]
             },
-            limit: 20
-        }).asArray();
+            {
+                projection: {
+                    title: 1
+                },
+                sort: {
+                    views: -1
+                },
+                limit: 20
+            })
+        .asArray();
     const obj = {}
     docs.forEach((doc) => {
         obj[doc._id] = { ...doc, _id: String(doc._id) }
@@ -55,9 +60,14 @@ export const fetchArticlesByCategory = async (categoryId) => {
         },
         {
             projection: {
-                title: 1
-            }
-        }).asArray();
+                title: 1,
+                subtitle: 1
+            },
+            sort: {
+                views: -1
+            },
+        })
+        .asArray();
     const obj = {}
     docs.forEach((doc) => {
         obj[doc._id] = { ...doc, _id: String(doc._id) }

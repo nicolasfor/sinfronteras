@@ -39,9 +39,11 @@ const useArticles = () => {
     };
 
 
-    const dispatchLoadCategories = async () => {
+    const dispatchLoadCategories = async (showLoad) => {
         try {
-            dispatch(show_loading());
+            if (showLoad) {
+                dispatch(show_loading());
+            }
             if (!_articles.isFetched) {
                 const docs = await fetchCategories();
                 dispatch(loadCategories(docs));
@@ -51,7 +53,9 @@ const useArticles = () => {
         catch (error) {
 
         }
-        dispatch(hidden_loading());
+        if (showLoad) {
+            dispatch(hidden_loading());
+        }
     };
 
     const dispatchSetSelected = (payload) => {

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useArticles from '../../modules/articles/useHook';
-import Ads from '../Ads';
 
 const Categories = () => {
 
@@ -34,6 +33,9 @@ const Titles = () => {
     };
     const onSelectArticle = (e, id) => {
         e.preventDefault();
+        if (selected && selected._id === id) {
+            return;
+        }
         dispatchLoadArticleById(id);
     };
     return (
@@ -42,14 +44,15 @@ const Titles = () => {
                 <i className="fas fa-arrow-left"></i>
             </button>
             <ul className="list-group">
-                {Object.values(list).map(({ _id, title }) =>
+                {Object.values(list).map(({ _id, title, subtitle }) =>
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     (<a
                         href="#"
                         key={_id}
                         onClick={(e) => onSelectArticle(e, _id)}
                         className={`list-group-item list-group-item-action ${selected && selected._id === _id ? 'list-group-item-warning' : ''}`}>
-                        {title}
+                        <h5 className="mb-1">{title}</h5>
+                        <p className="mb-1">{subtitle}</p>
                     </a>)
                 )}
             </ul>

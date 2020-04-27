@@ -29,7 +29,7 @@ const Portal = (props) => {
 
 const Loading = () => {
     const isLoading = useLoading()[0];
-    if(!isLoading){
+    if(isLoading){
         return null;
     }
     return (

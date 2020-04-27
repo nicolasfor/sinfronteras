@@ -188,6 +188,12 @@ header.masthead {
   display: flex; }
   .articles-container .articles-content {
     max-width: 70%; }
+    .articles-container .articles-content .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .articles-container .articles-content .image-container img {
+        max-width: 50%; }
   .articles-container .articles-list {
     min-width: 30%;
     width: 100%;
@@ -560,14 +566,16 @@ ul.social-buttons {
       background-color: #fed136; }
 
 .loading-component {
+  display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(236, 214, 138, 0.5);
   z-index: 1000 !important; }
 

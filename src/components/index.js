@@ -15,7 +15,6 @@ import SectionContact from './SectionContact'
 import Footer from './Footer'
 import NavBar from './NavBar';
 import useArticles from '../modules/articles/useHook';
-import Ads from './Ads';
 const Main = () => {
 
     const { dispatchLoadCategories } = useArticles()[1];
@@ -49,13 +48,9 @@ const Main = () => {
                     <>
                         <Header />
                         <Intro />
-                        <Ads />
                         <SectionWeDo />
-                        <Ads />
                         <SectionTeam />
-                        <Ads />
                         <SectionContact />
-                        <Ads />
                     </>
                 </Route>
             </Switch>

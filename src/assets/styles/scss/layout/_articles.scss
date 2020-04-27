@@ -10,9 +10,19 @@
     display: -webkit-flex;
     display: flex;
 
-    .articles-content{
+    .articles-content {
         max-width: 70%;
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 50%;
+            }
+        }
     }
+
     .articles-list {
         min-width: 30%;
         width: 100%;
@@ -30,9 +40,10 @@
         flex-flow: wrap-reverse;
         margin: 0;
 
-        .articles-content{
+        .articles-content {
             max-width: 100%;
         }
+
         .articles-content,
         .articles-list {
             margin: 1rem 0;
