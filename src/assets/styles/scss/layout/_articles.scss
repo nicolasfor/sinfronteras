@@ -6,25 +6,19 @@
 .articles-container {
     padding: 20px 0;
     margin: 0 1rem;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
 
-    .articles-list,
-    .articles-content {
-        height: 75vh;
+    .articles-content{
+        max-width: 70%;
     }
-
     .articles-list {
+        min-width: 30%;
+        width: 100%;
         overflow: hidden;
-
-        .list-group {
-            height: 55vh;
-            overflow: auto;
-        }
+        margin-right: 1rem;
     }
-
-    .articles-content {
-        overflow: auto;
-    }
-
 }
 
 .input-group-append {
@@ -35,10 +29,13 @@
     .articles-container {
         flex-flow: wrap-reverse;
         margin: 0;
-        
-        .articles-list,
-        .articles-content {
-            margin: 2rem 0;
+
+        .articles-content{
+            max-width: 100%;
+        }
+        .articles-content,
+        .articles-list {
+            margin: 1rem 0;
         }
     }
 }

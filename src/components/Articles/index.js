@@ -20,18 +20,14 @@ const Articles = () => {
     return (
         <>
             <div className="black-section" />
-            <section className="articles-container row">
-                <Ads />
-                <div className={`col-sm-12 ${selected ? 'col-md-4' : 'col-md-12'}`}>
-                    <List />
-                </div>
+            <Ads />
+            <section className="articles-container">
+                <List />
                 {selected &&
-                    <div className="col-sm-12 col-md-8">
-                        <Content />
-                    </div>
+                    <Content />
                 }
-                <Ads />
             </section>
+            <Ads />
         </>
     )
 

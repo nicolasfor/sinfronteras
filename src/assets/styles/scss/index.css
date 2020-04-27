@@ -183,16 +183,10 @@ header.masthead {
 .articles-container {
   padding: 20px 0;
   margin: 0 1rem; }
-  .articles-container .articles-list,
-  .articles-container .articles-content {
-    height: 75vh; }
   .articles-container .articles-list {
     overflow: hidden; }
     .articles-container .articles-list .list-group {
-      height: 55vh;
-      overflow: auto; }
-  .articles-container .articles-content {
-    overflow: auto; }
+      height: 55vh; }
 
 .input-group-append {
   cursor: pointer; }

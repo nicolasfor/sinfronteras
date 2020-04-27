@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useArticles from '../../modules/articles/useHook';
+import Ads from '../Ads';
 
 const Categories = () => {
 
@@ -40,7 +41,7 @@ const Titles = () => {
             <button className="btn btn-primary btn-lg btn-block" onClick={handleClick}>
                 <i className="fas fa-arrow-left"></i>
             </button>
-            <ul className="list-group overflow-auto">
+            <ul className="list-group">
                 {Object.values(list).map(({ _id, title }) =>
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     (<a
