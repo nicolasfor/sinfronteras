@@ -18,7 +18,7 @@ const Intro = () => {
                             <i className="fas fa-flag fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 className="service-heading">Objetivo</h4>
-                        <p className="text-muted">En Abogados Sin Frontera hacemos todo lo posible para brindar un excelente servicio en las consultas de nuestros usuarios. Nos enfocamos de tener el conocimiento de la legislación y los procedimientos de inmigración de distintas nacionalidades.</p>
+                        <p className="text-muted">En Abogados Sin Frontera hacemos todo lo posible para brindar un excelente servicio en las consultas de nuestros usuarios. Nos enfocamos en tener el conocimiento de la legislación y los procedimientos de inmigración de distintas nacionalidades.</p>
                     </div>
                     <div className="col-md-4">
                         <span className="fa-stack fa-4x">

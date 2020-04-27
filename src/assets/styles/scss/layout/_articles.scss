@@ -12,27 +12,32 @@
         height: 75vh;
     }
 
-    .articles-list{
+    .articles-list {
         overflow: hidden;
-        .list-group{
+
+        .list-group {
             height: 55vh;
             overflow: auto;
         }
     }
+
     .articles-content {
         overflow: auto;
     }
 
 }
 
-.input-group-append{
+.input-group-append {
     cursor: pointer;
 }
 
 @media(max-width:992px) {
-    .articles-container{
+    .articles-container {
         flex-flow: wrap-reverse;
-        .articles-content{
+        margin: 0;
+        
+        .articles-list,
+        .articles-content {
             margin: 2rem 0;
         }
     }

@@ -9,12 +9,19 @@ const client = Stitch.initializeDefaultAppClient('asf-ewvhw');
 
 const db = client.getServiceClient(RemoteMongoClient.factory, 'asf-service').db('asf');
 
+
+const loginStitch = async () => {
+    await client.auth.loginWithCredential(new AnonymousCredential());
+}
+
 export const fetchArticleById = async (id) => {
+    await loginStitch();
     const docs = await db.collection('articles').find({ _id: new BSON.ObjectId(id) }).asArray();
     return docs.length > 0 ? { ...docs[0], _id: String(docs[0]._id) } : null;
 };
 
 export const fetchArticlesByString = async (str) => {
+    await loginStitch();
     const docs = await db.collection('articles').find(
         {
             $or: [
@@ -37,7 +44,7 @@ export const fetchArticlesByString = async (str) => {
 
 export const fetchArticlesByCategory = async (categoryId) => {
 
-    await client.auth.loginWithCredential(new AnonymousCredential())
+    await loginStitch();
     const docs = await db.collection('articles').find(
         {
             categories: {
@@ -60,7 +67,7 @@ export const fetchArticlesByCategory = async (categoryId) => {
 };
 
 export const fetchCategories = async () => {
-    await client.auth.loginWithCredential(new AnonymousCredential())
+    await loginStitch();
     const docs = await db.collection('categories').find({}, { limit: 100 }).asArray();
     const obj = {}
     docs.forEach((doc) => {

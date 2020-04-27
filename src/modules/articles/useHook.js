@@ -65,6 +65,7 @@ const useArticles = () => {
             dispatchSetSelected(article);
         }
         catch (error) {
+            console.log('error: ', error);
 
         }
         dispatch(hidden_loading());
