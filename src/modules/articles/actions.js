@@ -1,6 +1,19 @@
 
-import { LOAD_CATEGORIES, LOAD_ARTICLES, SET_SELECTED, SET_IS_FETCHED } from './actionTypes';
+import {
+    LOAD_MOST_VISITED,
+    LOAD_MOST_RECENT,
+    LOAD_CATEGORIES,
+    LOAD_ARTICLES,
+    SET_SELECTED,
+    SET_IS_FETCHED
+} from './actionTypes';
 
+export const loadMostVisited = (payload) => {
+    return { type: LOAD_MOST_VISITED, payload }
+}
+export const loadMostRecent = (payload) => {
+    return { type: LOAD_MOST_RECENT, payload }
+}
 export const loadArticles = (payload) => {
     return { type: LOAD_ARTICLES, payload }
 }

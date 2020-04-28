@@ -20,6 +20,18 @@ export const fetchArticleById = async (id) => {
     return doc ? { ...doc, _id: String(doc._id) } : null;
 };
 
+export const fetchMostVisited = async () => {
+    await loginStitch();
+    const docs = await client.callFunction('getMostVisited');
+    return docs.map(doc => ({ ...doc, _id: String(doc._id) }));
+};
+
+export const fetchMostRecent = async () => {
+    await loginStitch();
+    const docs = await client.callFunction('getMostRecent');
+    return docs.map(doc => ({ ...doc, _id: String(doc._id) }));
+};
+
 export const fetchArticlesByString = async (str) => {
     await loginStitch();
     const docs = await db.collection('articles')

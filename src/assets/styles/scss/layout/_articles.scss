@@ -1,3 +1,35 @@
+.articles-carousel {
+    background-color: #f7f7f7;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel-item {
+        padding: 5rem;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+
+    }
+
+    .carousel-indicators {
+        li {
+            background-color: rgba(0, 0, 0, .3);
+        }
+    }
+}
+
+.articles-label-border {
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: solid 3px;
+    border-bottom-color: black;
+}
+
 .black-section {
     background-color: #212529;
     height: 104px;
@@ -11,12 +43,13 @@
     display: flex;
 
     .articles-content {
-        max-width: 70%;
+        max-width: 100%;
 
         .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 max-width: 50%;
             }

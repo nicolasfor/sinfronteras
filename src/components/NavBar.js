@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import HeaderImage from '../assets/img/logos/main.png'
+import useArticles from '../modules/articles/useHook';
 
 const NavBar = () => {
     const history = useHistory();
+    const { mostRecent, mostVisited } = useArticles()[0];
+
     const goTo = (tab) => {
         history.push("/");
         const target = tab && window.$(`#${tab}`);
@@ -31,6 +34,15 @@ const NavBar = () => {
         }
     });
 
+    const goToArticles = () => {
+        if (mostRecent.length === 0 || mostVisited.length === 0) {
+            history.push('/#/articles')
+        }
+        else {
+            goTo('articles');
+        }
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -44,7 +56,7 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav text-uppercase ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link js-scroll-trigger articles-nav" to="/articles">Artículos</Link>
+                                <a className="nav-link js-scroll-trigger articles-nav" onClick={goToArticles} href="#articles">Artículos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" onClick={() => goTo('start')} href="#start">Quienes somos</a>

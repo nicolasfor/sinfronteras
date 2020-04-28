@@ -1,6 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticlesByString, fetchArticleById, fetchArticlesByCategory, fetchCategories } from '../../util';
-import { loadCategories, loadArticles, setSelected, setIsFetched } from './actions'
+import {
+    fetchMostRecent,
+    fetchMostVisited,
+    fetchArticlesByString,
+    fetchArticleById,
+    fetchArticlesByCategory,
+    fetchCategories
+} from '../../util';
+import {
+    loadMostVisited,
+    loadMostRecent,
+    loadCategories,
+    loadArticles,
+    setSelected,
+    setIsFetched
+} from './actions'
 import { show_loading, hidden_loading } from '../ui/loading/actions'
 
 const useArticles = () => {
@@ -10,6 +24,18 @@ const useArticles = () => {
 
     const dispatchClearArticles = async () => {
         dispatch(loadArticles({}))
+    };
+    const dispatchLoadMostVisited = async () => {
+        if (_articles.mostVisited.length === 0) {
+            const docs = await fetchMostVisited();
+            dispatch(loadMostVisited(docs))
+        }
+    };
+    const dispatchLoadMostRecent = async () => {
+        if (_articles.mostRecent.length === 0) {
+            const docs = await fetchMostRecent();
+            dispatch(loadMostRecent(docs))
+        }
     };
 
     const dispatchLoadArticlesByCategory = async (categoryId) => {
@@ -84,6 +110,8 @@ const useArticles = () => {
         { ..._articles },
         {
             dispatchLoadCategories,
+            dispatchLoadMostVisited,
+            dispatchLoadMostRecent,
             dispatchClearArticles,
             dispatchSetSelected,
             dispatchSetIsFetched,

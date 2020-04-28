@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Ads from '../Ads';
 import useArticles from '../../modules/articles/useHook';
 
 const Content = () => {
 
     const [{ selected }] = useArticles();
 
+    useEffect(() => {
+        window.$('html, body').animate({
+            scrollTop: 0
+        }, 1000, "easeInOutExpo");
+    }, [selected])
     if (!selected) {
         return null;
     }
@@ -21,6 +27,7 @@ const Content = () => {
                         <div className="image-container">
                             <img className="card-img-top" src={picture} alt="Not Available" />
                         </div>}
+                    <Ads />
                     {content &&
                         content.split('\\n').map((text, index) => <p key={index} className="card-text">{text}</p>)
                     }
@@ -31,6 +38,7 @@ const Content = () => {
                             {links.map((link, index) => <li><a className="card-link" key={index} href={link}>{link}</a></li>)}
                         </>
                     }
+                    <Ads />
                 </div>
             </div>
         </>

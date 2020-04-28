@@ -10,14 +10,19 @@ import Header from './Header'
 import Intro from './Intro'
 import Articles from './Articles'
 import SectionWeDo from './SectionWeDo'
+import SectionArticles from './SectionArticles'
 import SectionTeam from './SectionTeam'
 import SectionContact from './SectionContact'
 import Footer from './Footer'
 import NavBar from './NavBar';
+import Ads from './Ads';
 import useArticles from '../modules/articles/useHook';
 const Main = () => {
 
-    const { dispatchLoadCategories } = useArticles()[1];
+    const {
+        dispatchLoadMostVisited,
+        dispatchLoadMostRecent,
+        dispatchLoadCategories } = useArticles()[1];
 
     useEffect(() => {
         // Activate scrollspy to add active class to navbar items on scroll
@@ -33,6 +38,8 @@ const Main = () => {
 
     useEffect(() => {
         dispatchLoadCategories();
+        dispatchLoadMostRecent();
+        dispatchLoadMostVisited();
         // eslint-disable-next-line
     }, [])
 
@@ -47,10 +54,16 @@ const Main = () => {
                 <Route path="/">
                     <>
                         <Header />
+                        <Ads />
+                        <SectionArticles />
                         <Intro />
+                        <Ads />
                         <SectionWeDo />
+                        <Ads />
                         <SectionTeam />
+                        <Ads />
                         <SectionContact />
+                        <Ads />
                     </>
                 </Route>
             </Switch>

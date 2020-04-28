@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useArticles from '../../modules/articles/useHook';
+import { useHistory } from "react-router-dom";
 
 const Categories = () => {
 
@@ -25,7 +26,7 @@ const Categories = () => {
     )
 };
 const Titles = () => {
-
+    const history = useHistory();
     const [{ list, selected }, { dispatchClearArticles, dispatchLoadArticleById }] = useArticles();
     const handleClick = (e) => {
         e.preventDefault();
@@ -36,6 +37,7 @@ const Titles = () => {
         if (selected && selected._id === id) {
             return;
         }
+        history.push(`/articles/${id}`);
         dispatchLoadArticleById(id);
     };
     return (
