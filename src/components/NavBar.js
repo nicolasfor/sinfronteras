@@ -12,7 +12,7 @@ const NavBar = () => {
         const target = tab && window.$(`#${tab}`);
         let scrollTop = 0;
         if (target && target.offset()) {
-            scrollTop = (target.offset().top - 54);
+            scrollTop = (target.offset().top - 90);
         }
         window.$('html, body').animate({
             scrollTop
