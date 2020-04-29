@@ -214,7 +214,8 @@ header.masthead {
       justify-content: center;
       align-items: center; }
       .articles-container .articles-content .image-container img {
-        max-width: 50%; }
+        max-width: 100%;
+        margin: 1rem 0; }
   .articles-container .articles-list {
     min-width: 30%;
     width: 100%;

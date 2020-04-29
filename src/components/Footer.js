@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-4">
-                        <span className="copyright">Copyright &copy; Abogados sin Frontera 2019</span>
+                        <span className="copyright">Copyright &copy; Abogados Sin Frontera 2020</span>
                     </div>
                     <div className="col-md-4">
                         <ul className="list-inline social-buttons">
