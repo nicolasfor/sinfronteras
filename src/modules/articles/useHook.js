@@ -25,6 +25,10 @@ const useArticles = () => {
     const dispatchClearArticles = async () => {
         dispatch(loadArticles({}))
     };
+
+    const dispatchClearSelected = async () => {
+        dispatch(setSelected(null))
+    };
     const dispatchLoadMostVisited = async () => {
         if (_articles.mostVisited.length === 0) {
             const docs = await fetchMostVisited();
@@ -113,6 +117,7 @@ const useArticles = () => {
             dispatchLoadMostVisited,
             dispatchLoadMostRecent,
             dispatchClearArticles,
+            dispatchClearSelected,
             dispatchSetSelected,
             dispatchSetIsFetched,
             dispatchLoadArticlesByCategory,

@@ -12,7 +12,7 @@ const SectionTeam = () => {
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="team-member">
-                            <img className="mx-auto rounded-circle" src={require('../assets/img/team/paola.jpg')} alt="" />
+                            <img className="mx-auto rounded-circle" src={require('../../assets/img/team/paola.jpg')} alt="" />
                             <h4>Paola Galindo</h4>
                             <p className="text-muted">Abogada</p>
                             <ul className="list-inline social-buttons">
@@ -26,7 +26,7 @@ const SectionTeam = () => {
                     </div>
                     <div className="col-sm-6">
                         <div className="team-member">
-                            <img className="mx-auto rounded-circle" src={require('../assets/img/team/Nicolas.jpg')} alt="" />
+                            <img className="mx-auto rounded-circle" src={require('../../assets/img/team/Nicolas.jpg')} alt="" />
                             <h4>Nicolás Forero</h4>
                             <p className="text-muted">Web Designer</p>
                             <ul className="list-inline social-buttons">

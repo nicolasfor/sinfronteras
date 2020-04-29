@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from './Modal'
+import Modal from '../../components/Modal'
 
 const title1 = "VISADOS Y AUTORIZACIONES";
 const content1 = "Como extranjero necesitará un visado de estancia (turismo o estudio) o un permiso de residencia (que le pueda permitir trabajar o no depende del caso) para estar en España de forma legal. Por lo anterior, nuestra intención es poder asesorarle y empezar los trámites incluso antes que usted se encuentre en el país.";
@@ -44,7 +44,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/01-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/01-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>VISADOS Y AUTORIZACIONES</h4>
@@ -57,7 +57,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/02-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/02-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>VISADO DE ESTUDIOS, TRABAJO Y SU PRÓRROGA</h4>
@@ -70,7 +70,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/03-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/03-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>REAGRUPACIÓN FAMILIAR</h4>
@@ -83,7 +83,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/04-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/04-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>ARRAIGO SOCIAL, LABORAL Y FAMILIAR</h4>
@@ -96,7 +96,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/05-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/05-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>SOLICITUD DE NACIONALIDAD ESPAÑOLA </h4>
@@ -109,7 +109,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/06-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/06-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>AUTORIZACIÓN DE RESIDENCIA NO LUCRATIVA</h4>
@@ -122,7 +122,7 @@ const SectionWeDo = () => {
                                         <i className="fas fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img className="img-fluid img-fluid-thumbnail" src={require('../assets/img/portfolio/07-full.jpg')} alt="" />
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/07-full.jpg')} alt="" />
                             </a>
                             <div className="portfolio-caption">
                                 <h4>OTROS TRÁMITES RELACIONADOS CON LA MATERIA DE EXTRANJERÍA</h4>
@@ -132,7 +132,7 @@ const SectionWeDo = () => {
                 </div>
             </section>
 
-            <Modal id="bt-modal" title={title} image={require(`../assets/img/portfolio/${image}`)}>
+            <Modal id="bt-modal" title={title} image={require(`../../assets/img/portfolio/${image}`)}>
                 {content}
             </Modal>
         </>

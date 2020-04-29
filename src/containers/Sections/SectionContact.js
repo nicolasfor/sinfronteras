@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import sendMail from '../mail';
+import React, { useState } from 'react';
+import sendMail from '../../mail';
 
 const Intro = () => {
 
@@ -10,19 +10,6 @@ const Intro = () => {
         message: '',
         formErrors: { name: null, email: null, phone: null, message: null }
     })
-
-    useEffect(() => {
-        const script = document.createElement('script');
-
-        script.src = "https://www.staxon.com/js/button.js";
-        script.async = true;
-
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
 
     const handleInput = (e) => {
         const name = e.target.name;

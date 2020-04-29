@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import Carousel from './Carousel';
-import useArticles from '../modules/articles/useHook';
+import Carousel from '../../components/Carousel';
+import ArticlesList from '../Articles/List/index'
+import useArticles from '../../modules/articles/useHook';
 
 const SectionArticles = () => {
     const history = useHistory();
 
-    const [{ mostRecent, mostVisited }, { dispatchLoadArticleById }] = useArticles();
+    const [{ mostRecent, mostVisited }, {
+        dispatchLoadMostVisited,
+        dispatchLoadMostRecent,
+        dispatchClearSelected,
+        dispatchClearArticles }] = useArticles();
+    useEffect(() => {
+        dispatchClearArticles();
+        dispatchClearSelected();
+        dispatchLoadMostRecent();
+        dispatchLoadMostVisited();
+        // eslint-disable-next-line
+    }, [])
 
     const onSelectArticle = (id) => {
         history.push(`/articles/${id}`);
-        dispatchLoadArticleById(id);
     };
 
     if (mostRecent.length === 0 || mostVisited.length === 0) {
@@ -28,10 +39,8 @@ const SectionArticles = () => {
                 <Carousel id="mostRecent" content={mostRecent} onSelectArticle={onSelectArticle} />
                 <label className="articles-label-border mt-3"> Los más vistos</label>
                 <Carousel id="mostVisited" content={mostVisited} onSelectArticle={onSelectArticle} />
-                <button className="btn btn-primary btn-lg btn-block mt-4" onClick={() => history.push('/articles')}>
-                    Más Artículos
-                    <i className="ml-1 fas fa-search"></i>
-                </button>
+                <label className="articles-label-border mt-3"> Todos</label>
+                <ArticlesList />
             </div>
         </section>
     );

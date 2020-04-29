@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import './assets/styles/css/index.css';
-import Main from './components'
+import Main from './containers'
 import Loading from './components/Loading'
 import * as serviceWorker from './serviceWorker';
 import store from './store';
