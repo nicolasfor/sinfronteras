@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useArticles from '../../../modules/articles/useHook';
 import Categories from './Categories';
 import Titles from './Titles';
+import Ads from '../../../components/Ads';
 
 const List = () => {
     const [searchedValue, setSearchedValue] = useState();
@@ -44,6 +45,7 @@ const List = () => {
                 }
 
             </div>
+            <Ads />
         </div>
     )
 };

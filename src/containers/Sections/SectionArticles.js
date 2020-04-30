@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import Carousel from '../../components/Carousel';
+import Ads from '../../components/Ads';
 import ArticlesList from '../Articles/List/index'
 import useArticles from '../../modules/articles/useHook';
 
@@ -38,6 +39,7 @@ const SectionArticles = () => {
                 <label className="articles-label-border"> Los más Recientes</label>
                 <Carousel id="mostRecent" content={mostRecent} onSelectArticle={onSelectArticle} />
                 <label className="articles-label-border mt-3"> Los más vistos</label>
+                <Ads />
                 <Carousel id="mostVisited" content={mostVisited} onSelectArticle={onSelectArticle} />
                 <label className="articles-label-border mt-3"> Todos</label>
                 <ArticlesList />
