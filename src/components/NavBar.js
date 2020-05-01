@@ -8,7 +8,6 @@ const NavBar = ({ hideButtons }) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
     const hideMenu = () => {
-        console.log("HIDE");
         setIsExpanded(!isExpanded);
     }
     return (

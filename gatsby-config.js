@@ -39,6 +39,17 @@ module.exports = {
             options: {
                 publisherId: `ca-pub-4408212865560272`
             },
+        },
+        {
+            resolve: `gatsby-plugin-react-helmet`
+        },
+        {
+            resolve: `gatsby-plugin-web-font-loader`,
+            options: {
+                google: {
+                    families: ['Montserrat', 'Kaushan Script', 'Droid Serif', 'Roboto Slab']
+                }
+            }
         }
     ]
 }

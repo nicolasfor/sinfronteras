@@ -1,13 +1,13 @@
 import React from 'react';
-import Vendor from '../vendor';
 import NavBar from '../components/NavBar';
+import SEO from '../components/Seo';
 import Footer from '../components/Footer';
 
-const Layout = ({ children, navProps }) => {
+const Layout = ({ children, navProps, seoProps }) => {
 
     return (
         <>
-            <Vendor />
+            <SEO {...seoProps} />
             <NavBar {...navProps} />
             {children}
             <Footer />

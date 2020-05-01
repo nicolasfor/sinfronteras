@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import SEO from '../../../components/Seo'
 import Ads from '../../../components/Ads'
 import List from '../../../pages/Articles/List'
 import Layout from '../../../layouts';
@@ -15,8 +14,7 @@ const Article = ({ pageContext: { article } }) => {
     }, [])
 
     return (
-        <Layout navProps={{ hideButtons: true }}>
-            <SEO title={title} description={subtitle} />
+        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id }}>
             <section className="articles-container">
                 <List />
                 <div className="card articles-content">

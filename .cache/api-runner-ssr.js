@@ -8,6 +8,9 @@ var plugins = [{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-google-adsense/gatsby-ssr'),
       options: {"plugins":[],"publisherId":"ca-pub-4408212865560272"},
     },{
+      plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/gatsby-ssr'),
       options: {"plugins":[]},
     }]
