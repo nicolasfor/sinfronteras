@@ -41,7 +41,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title1, content1, '01-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/01-full.jpg')} alt="" />
@@ -54,7 +54,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title2, content2, '02-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/02-full.jpg')} alt="" />
@@ -67,7 +67,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title3, content3, '03-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/03-full.jpg')} alt="" />
@@ -80,7 +80,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title4, content4, '04-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/04-full.jpg')} alt="" />
@@ -93,7 +93,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title5, content5, '05-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/05-full.jpg')} alt="" />
@@ -106,7 +106,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title6, content6, '06-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/06-full.jpg')} alt="" />
@@ -119,7 +119,7 @@ const SectionWeDo = () => {
                             <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title7, content7, '07-full.jpg')} href="#bt-modal">
                                 <div className="portfolio-hover">
                                     <div className="portfolio-hover-content">
-                                        <i className="fas fa-plus fa-3x"></i>
+                                        <i className="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
                                 <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/07-full.jpg')} alt="" />
