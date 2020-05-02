@@ -1,4 +1,3 @@
-// Global styling for this template
 body {
   overflow-x: hidden;
   @include body-font;
@@ -8,10 +7,10 @@ body {
   --textTitle: #222;
   --textLink: blue;
   --hr: hsla(0, 0%, 0%, 0.2);
-
-  background-color: var(--bg);
+  --borderColor: rgba(0, 0, 0, .125); 
 }
 
+// Global styling for this template
 body.dark {
   overflow-x: hidden;
   @include body-font;
@@ -23,8 +22,10 @@ body.dark {
   --textTitle: white;
   --textLink: yellow;
   --hr: hsla(0, 0%, 100%, 0.2);
-  border-color: var(--textNormal);
+  --borderColor: rgba(255, 255, 255, .125);
 }
+
+
 
 .input-group-text,
 .form-control,
@@ -32,7 +33,7 @@ body.dark {
 .card {
   background-color: var(--bg);
   color: var(--textNormal);
-  border-color: var(--textNormal);
+  border-color: var(--borderColor);
 }
 
 p {
