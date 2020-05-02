@@ -3,13 +3,14 @@ import Scrollspy from 'react-scrollspy'
 import Scroll from './Scroll';
 import { Link } from 'gatsby';
 import Overlay from './Overlay';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 const NavBar = ({ hideButtons }) => {
-
     const [isExpanded, setIsExpanded] = useState(false);
     const hideMenu = () => {
         setIsExpanded(!isExpanded);
     }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div className="container">
@@ -30,6 +31,13 @@ const NavBar = ({ hideButtons }) => {
                             <li className="nav-item">
                                 <Link className="nav-link js-scroll-trigger" to="/">Inicio</Link>
                             </li>
+                            <ThemeToggler>
+                                {({ theme, toggleTheme }) => (
+                                    <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                                        <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
+                                    </li>
+                                )}
+                            </ThemeToggler>
                         </ul>
                     </div>
                     :
@@ -66,13 +74,21 @@ const NavBar = ({ hideButtons }) => {
                                     <a className="nav-link js-scroll-trigger" href="#">Contacto</a>
                                 </Scroll>
                             </li>
+                            <ThemeToggler>
+                                {({ theme, toggleTheme }) => (
+                                    <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                                        <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
+                                    </li>
+                                )}
+                            </ThemeToggler>
+
                         </Scrollspy>
                     </div>
                 }
             </div>
             {
                 isExpanded &&
-                <Overlay onClick={hideMenu}/>
+                <Overlay onClick={hideMenu} />
             }
         </nav>
     );

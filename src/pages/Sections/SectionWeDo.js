@@ -28,7 +28,7 @@ const SectionWeDo = () => {
 
     return (
         <>
-            <section className="bg-light page-section" id="services">
+            <section className="page-section" id="services">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">

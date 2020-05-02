@@ -2,7 +2,37 @@
 body {
   overflow-x: hidden;
   @include body-font;
-  padding-top: 65px; 
+  padding-top: 65px;
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: blue;
+  --hr: hsla(0, 0%, 0%, 0.2);
+
+  background-color: var(--bg);
+}
+
+body.dark {
+  overflow-x: hidden;
+  @include body-font;
+  padding-top: 65px;
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #363537;
+  --textNormal: #FAFAFA;
+  --textTitle: white;
+  --textLink: yellow;
+  --hr: hsla(0, 0%, 100%, 0.2);
+  border-color: var(--textNormal);
+}
+
+.input-group-text,
+.form-control,
+.list-group-item,
+.card {
+  background-color: var(--bg);
+  color: var(--textNormal);
+  border-color: var(--textNormal);
 }
 
 p {
@@ -11,6 +41,7 @@ p {
 
 a {
   color: $primary;
+
   &:hover {
     color: darken($primary, 10%);
   }
@@ -32,11 +63,13 @@ h6 {
 
 .page-section {
   padding: 50px 0;
+
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
   }
+
   h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
@@ -46,6 +79,7 @@ h6 {
     @include serif-font;
   }
 }
+
 @media(min-width:768px) {
   section {
     padding: 150px 0;
@@ -71,6 +105,6 @@ img::-moz-selection {
   background: transparent;
 }
 
-.fixed-top{
-  z-index: 600!important;
+.fixed-top {
+  z-index: 600 !important;
 }

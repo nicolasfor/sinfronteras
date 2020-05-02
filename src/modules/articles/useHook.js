@@ -74,7 +74,9 @@ const useArticles = () => {
     const dispatchSetSelected = async (id) => {
         dispatch(setSelected(id));
         try {
-            await api().updateViewsById(id);
+            if (process.env.NODE_ENV === 'production') {
+                await api().updateViewsById(id);
+            }
         }
         catch (error) {
 

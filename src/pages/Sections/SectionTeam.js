@@ -18,7 +18,7 @@ const SectionTeam = () => {
                             <ul className="list-inline social-buttons">
                                 <li className="list-inline-item">
                                     <a href="https://www.linkedin.com/in/paola-milena-galindo-a5264b154/">
-                                        <i className="fa fa-linkedin-in"></i>
+                                        <i className="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -32,7 +32,7 @@ const SectionTeam = () => {
                             <ul className="list-inline social-buttons">
                                 <li className="list-inline-item">
                                     <a href="https://www.linkedin.com/in/nicolasfor/">
-                                        <i className="fa fa-linkedin-in"></i>
+                                        <i className="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                             </ul>

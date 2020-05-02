@@ -44,12 +44,29 @@ module.exports = {
             resolve: `gatsby-plugin-react-helmet`
         },
         {
-            resolve: `gatsby-plugin-web-font-loader`,
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
             options: {
-                google: {
-                    families: ['Montserrat', 'Kaushan Script', 'Droid Serif', 'Roboto Slab']
-                }
+                fonts: [
+                    {
+                        family: `Montserrat`,
+                        variants: [`400`, `700`]
+                    },
+                    {
+                        family: `Kaushan Script`,
+                    },
+                    {
+                        family: `Droid Serif`,
+                        variants: [`400`, `700`, `400italic`, `700italic`]
+                    },
+                    {
+                        family: `Roboto Slab`,
+                        variants: [`400`, `100`, `300`, `700`]
+                    },
+                ],
             }
+        },
+        {
+            resolve: `gatsby-plugin-dark-mode`
         }
     ]
 }
