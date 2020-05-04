@@ -18,6 +18,7 @@ export default ({ _id, title = defaultTitle, description = defaultDescription })
             meta={[
                 { name: 'description', content: description },
                 { name: 'theme-color', content: '#000000' },
+                { property: 'og:url', content: link },
                 { property: 'og:title', content: title },
                 { property: `og:description`, content: description },
                 { property: `og:type`, content: `website` },

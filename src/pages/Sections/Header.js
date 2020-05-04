@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="container">
                     <div className="intro-text">
                         <div className="intro-lead-in">Bienvenido a nuestro portafolio!</div>
-                        <div className="intro-heading text-uppercase">Un placer conocerte</div>
+                        <h1 className="intro-heading text-uppercase">Un placer conocerte</h1>
                         <Scroll type="id" element="articles">
                             {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                             <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#">Cuentame más</a>
