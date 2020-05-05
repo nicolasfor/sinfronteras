@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import Ads from '../../../components/Ads'
+import Share from '../../../components/Share'
 import List from '../../../pages/Articles/List'
 import Layout from '../../../layouts';
 import useArticles from '../../../modules/articles/useHook';
+import { siteMetadata } from '../../../../gatsby-config';
 
 const Article = ({ pageContext: { article } }) => {
     const { _id, title, subtitle, date, picture, content, links } = article;
@@ -21,7 +23,7 @@ const Article = ({ pageContext: { article } }) => {
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
-                        {date && typeof date === 'object' && <p className="card-text"> {date.toDateString()}</p>}
+                        {date && <p className="card-text"> {new Date(date).toDateString()}</p>}
                         {picture && picture.length > 0 &&
                             <>
                                 <div className="image-container">
@@ -35,10 +37,14 @@ const Article = ({ pageContext: { article } }) => {
                         {
                             links && links.length > 0 &&
                             <>
-                                <h6 className="card-title">Enlaces de interes</h6>
-                                {links.map((link, index) => <li key={index}><a className="card-link" key={index} href={link}>{link}</a></li>)}
+                                <h6 className="card-title">Enlaces de interes:</h6>
+                                <ul class="list-group">
+                                    {links.map((link, index) => <li class="list-group-item"><a className="card-link" key={index} href={link}>{link}</a></li>)}
+                                </ul>
                             </>
                         }
+
+                        <Share url={`${siteMetadata.siteUrl}${_id}`} title={title} tags={['ASF']} twitterHandle="@extranjeriaasf" />
                         <Ads />
                     </div>
                 </div>

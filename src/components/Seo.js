@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import logo from '../assets//img/logos/main.png'
+import { siteMetadata } from '../../gatsby-config';
+
 const defaultTitle = 'Abogados Sin Frontera';
 const defaultDescription = 'Somos un equipo de Abogados que se especializa en extranjería e inmigración.';
 
-const domain = 'https://www.abogadosinfrontera.es/';
 export default ({ _id, title = defaultTitle, description = defaultDescription }) => {
 
-    const link = _id ? `${domain}${_id}` : domain;
+    const link = _id ? `${siteMetadata.siteUrl}${_id}` : siteMetadata.siteUrl;
 
     return (
         <Helmet
