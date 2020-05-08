@@ -31,7 +31,7 @@ module.exports = {
                 background_color: `#f7f0eb`,
                 theme_color: `#a2466c`,
                 display: `standalone`,
-                icon: 'src/assets/img/logos/main.png'
+                icon: 'src/assets/img/logos/main-small.png'
             },
         },
         {
@@ -50,6 +50,9 @@ module.exports = {
                     {
                         family: `Montserrat`,
                         variants: [`400`, `700`]
+                    },
+                    {
+                        family: `Oranienbaum`,
                     },
                     {
                         family: `Kaushan Script`,

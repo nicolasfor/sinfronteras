@@ -21,6 +21,11 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li className="list-inline-item">
+                                <a href="https://twitter.com/extranjeriaasf/">
+                                    <i className="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
                                 <a href="https://www.linkedin.com/in/paola-milena-galindo-a5264b154/">
                                     <i className="fa fa-linkedin"></i>
                                 </a>

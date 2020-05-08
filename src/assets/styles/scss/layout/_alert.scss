@@ -1,0 +1,31 @@
+.alert {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+.alert-dismissible {
+    padding-right: 4rem
+}
+
+.alert-dismissible .close,
+.alert-dismissible .o-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    color: inherit
+}

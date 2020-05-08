@@ -1,19 +1,20 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['phone'])     ||
-   empty($_POST['message'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+$json = file_get_contents('php://input');
+$data = json_decode($json);
+if(empty($data->name)      ||
+   empty($data->email)     ||
+   empty($data->phone)     ||
+   empty($data->message)   ||
+   !filter_var($data->email,FILTER_VALIDATE_EMAIL))
    {
    echo "No arguments Provided!";
    return false;
    }
    
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+$name = strip_tags(htmlspecialchars($data->name));
+$email_address = strip_tags(htmlspecialchars($data->email));
+$phone = strip_tags(htmlspecialchars($data->phone));
+$message = strip_tags(htmlspecialchars($data->message));
    
 // Create the email and send the message
 $to = 'paola@abogadosinfrontera.es'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.

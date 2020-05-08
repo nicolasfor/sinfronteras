@@ -5,7 +5,7 @@ import { siteMetadata } from '../../gatsby-config';
 const defaultTitle = 'Abogados Sin Frontera';
 const defaultDescription = 'Somos un equipo de Abogados que se especializa en extranjería e inmigración.';
 
-export default ({ _id, title = defaultTitle, description = defaultDescription }) => {
+export default ({ _id, title = defaultTitle, description = defaultDescription, photo }) => {
 
     const link = _id ? `${siteMetadata.siteUrl}${_id}` : siteMetadata.siteUrl;
 
@@ -17,13 +17,17 @@ export default ({ _id, title = defaultTitle, description = defaultDescription })
             ]}
             meta={[
                 { name: 'description', content: description },
+                { name: 'image', content: photo ? `${siteMetadata.siteUrl}${photo}` : null },
                 { name: 'theme-color', content: '#000000' },
                 { property: 'og:url', content: link },
                 { property: 'og:title', content: title },
                 { property: `og:description`, content: description },
-                { property: `og:type`, content: `website` },
+                { property: `og:image`, itemprop: "image", content: photo ? `${siteMetadata.siteUrl}${photo}` : null },
+                { property: `og:type`, content: `article` },
+                { name: `twitter:card`, content: "summary_large_image", },
                 { name: `twitter:title`, content: title, },
                 { name: `twitter:description`, content: description },
+                { name: `twitter:image`, content: photo ? `${siteMetadata.siteUrl}${photo}` : null },
             ]}>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" rel="stylesheet" crossorigin="anonymous"></link>
 

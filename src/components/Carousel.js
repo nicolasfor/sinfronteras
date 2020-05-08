@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from "gatsby"
 
-const Carousel = ({ id, content }) => {
+const Carousel = ({ id, content, className }) => {
 
     return (
-        <div id={id} className="carousel slide articles-carousel" data-ride="carousel">
+        <div
+            id={id}
+            className={[
+                'carousel slide',
+                className
+            ].join(' ').trim()}
+            data-ride="carousel">
             <ol className="carousel-indicators">
                 {content.map((el, index) => <li key={index} data-target={`#${id}`} data-slide-to={index} className={index === 0 ? 'active' : ''}></li>)}
             </ol>

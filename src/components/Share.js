@@ -12,9 +12,8 @@ import {
 
 const Share = ({ url, title, twitterHandle, tags }) => {
     return (
-        <div className="mt-4">
-            <h6>Comparte:</h6>
-            <div className="post-social">
+        <div className="list-group">
+            <div className="list-group-item post-social">
                 <FacebookShareButton url={url} className="button is-outlined is-rounded facebook" >
                     <FacebookIcon size={32} round />
                 </FacebookShareButton>

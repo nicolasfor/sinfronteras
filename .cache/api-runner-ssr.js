@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[],"trackingId":"UA-164864542-1","head":true,"cookieDomain":"abogadosinfrontera.es"},
     },{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Abogados Sin Fronteras","short_name":"ASF","start_url":"/","background_color":"#f7f0eb","theme_color":"#a2466c","display":"standalone","icon":"src/assets/img/logos/main.png"},
+      options: {"plugins":[],"name":"Abogados Sin Fronteras","short_name":"ASF","start_url":"/","background_color":"#f7f0eb","theme_color":"#a2466c","display":"standalone","icon":"src/assets/img/logos/main-small.png"},
     },{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-google-adsense/gatsby-ssr'),
       options: {"plugins":[],"publisherId":"ca-pub-4408212865560272"},
