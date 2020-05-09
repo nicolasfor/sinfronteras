@@ -5,7 +5,28 @@
     align-items: center;
 
     .carousel-item {
-        padding: 5rem;
+        padding: 5rem 3rem;
+
+        .subtitle {
+            height: 100px;
+        }
+
+        .title,
+        .subtitle {
+            overflow: hidden;
+            line-height: 20px;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-line-clamp: 5;
+            -moz-line-clamp: 5;
+            -ms-line-clamp: 5;
+            line-clamp: 5;
+            overflow: hidden;
+        }
     }
 
     .carousel-control-next,

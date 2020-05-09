@@ -12,7 +12,7 @@ const Sections = () => {
         <>
             <Header />
             <Ads />
-            {/* <SectionArticles /> */}
+            <SectionArticles />
             <Intro />
             <Ads />
             <SectionWeDo />

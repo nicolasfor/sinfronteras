@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from "gatsby"
 
-const Carousel = ({ id, content, className }) => {
+const Carousel = ({ id, content }) => {
 
     return (
-        <div
-            id={id}
-            className={[
-                'carousel slide',
-                className
-            ].join(' ').trim()}
-            data-ride="carousel">
+        <div id={id} className="carousel slide articles-carousel" data-ride="carousel">
             <ol className="carousel-indicators">
                 {content.map((el, index) => <li key={index} data-target={`#${id}`} data-slide-to={index} className={index === 0 ? 'active' : ''}></li>)}
             </ol>
@@ -18,8 +12,8 @@ const Carousel = ({ id, content, className }) => {
                 {content.map(({ _id, title, subtitle }, index) => (
                     <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        <h5 className="mb-1">{title}</h5>
-                        <p className="mb-1">{subtitle}</p>
+                        <h5 className="mb-1 title">{title}</h5>
+                        <p className="mb-1 subtitle">{subtitle}</p>
                         <div className="carousel-caption">
                             <Link to={`/${_id}`}>
                                 <button className="btn btn-primary ">

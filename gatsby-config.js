@@ -55,9 +55,6 @@ module.exports = {
                         family: `Oranienbaum`,
                     },
                     {
-                        family: `Kaushan Script`,
-                    },
-                    {
                         family: `Droid Serif`,
                         variants: [`400`, `700`, `400italic`, `700italic`]
                     },

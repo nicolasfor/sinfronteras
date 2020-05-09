@@ -12,7 +12,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":[{"family":"Montserrat","variants":["400","700"]},{"family":"Kaushan Script"},{"family":"Droid Serif","variants":["400","700","400italic","700italic"]},{"family":"Roboto Slab","variants":["400","100","300","700"]}]},
+      options: {"plugins":[],"fonts":[{"family":"Montserrat","variants":["400","700"]},{"family":"Oranienbaum"},{"family":"Droid Serif","variants":["400","700","400italic","700italic"]},{"family":"Roboto Slab","variants":["400","100","300","700"]}]},
     },{
       plugin: require('/Users/nicolasfor/Documents/Juridica/sinfronteras-React/node_modules/gatsby-plugin-dark-mode/gatsby-ssr'),
       options: {"plugins":[]},

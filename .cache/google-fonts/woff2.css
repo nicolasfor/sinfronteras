@@ -11,10 +11,10 @@
   src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Kaushan Script';
+  font-family: 'Oranienbaum';
   font-style: normal;
   font-weight: 400;
-  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v8/vm8vdRfvXFLG3OLnsO15WYS5DG74wNI.woff2) format('woff2');
+  src: local('Oranienbaum'), local('Oranienbaum-Regular'), url(https://fonts.gstatic.com/s/oranienbaum/v8/OZpHg_txtzZKMuXLIVrx-0zg5E0.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Droid Serif';
