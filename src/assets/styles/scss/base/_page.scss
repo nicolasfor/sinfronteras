@@ -7,7 +7,7 @@ body {
   --textTitle: #222;
   --textLink: blue;
   --hr: hsla(0, 0%, 0%, 0.2);
-  --borderColor: rgba(0, 0, 0, .125); 
+  --borderColor: rgba(0, 0, 0, .125);
 }
 
 // Global styling for this template
@@ -30,7 +30,9 @@ body.dark {
 .input-group-text,
 .form-control,
 .list-group-item,
-.card {
+.card,
+.modal-dialog,
+.modal-content {
   background-color: var(--bg);
   color: var(--textNormal);
   border-color: var(--borderColor);
