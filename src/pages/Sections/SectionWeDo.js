@@ -15,6 +15,8 @@ const title6 = "AUTORIZACIÓN DE RESIDENCIA NO LUCRATIVA";
 const content6 = "Este tipo de autorización le permite residir con estatus regular en España, pero no lo habilita para desarrollar actividades laborales o profesionales.Con este permiso irá acumulando el tiempo necesario para posteriormente optar a la nacionalidad española por residencia, lo cual no podría hacer si estuviese en régimen de estancia, como sucede cuando tiene un visado por turismo o estudios. Le asesoraremos sobre los requisitos que debe cumplir  para obtener este tipo de autorización en España.";
 const title7 = "OTROS TRÁMITES RELACIONADOS CON LA MATERIA DE EXTRANJERÍA";
 const content7 = "Los servicios antes mencionados son a título enunciativo, ya que éstos son los que normalmente nos solicitan nuestros clientes. No obstante, como despacho de abogados expertos en extranjería e inmigración, tratamos cualquier otro aspecto relacionado con esta materia.";
+const title8 = "COLOMBIANOS EN ESPAÑA";
+const content8 = "En el equipo de Abogados Sin Frontera, prestamos el servicio a los Colombianos que viven en España sin importar su estatus, atendiendo sus necesidades en España y Colombia para la solución de todos los aspectos jurídicos y legales en ambos países.\\n  Tramites: Solicitud de registros civiles ante notarias y registradurías, Legalización y apostilla de documentos, Trámites ante la DIAN, expedición del RUT, actualización RUT, elaboración declaraciones de renta, Envío de documentos a España, Traslado de fondos privados de pensiones a Colpensiones y cualquier tipo de trámite que se requiera desde Colombia y España.";
 
 const SectionWeDo = () => {
 
@@ -128,12 +130,27 @@ const SectionWeDo = () => {
                                 <h4>OTROS TRÁMITES RELACIONADOS CON LA MATERIA DE EXTRANJERÍA</h4>
                             </div>
                         </div>
+                        <div className="col-md-4 col-sm-6 portfolio-item">
+                            <a className="portfolio-link" data-toggle="modal" onClick={() => updateModal(title8, content8, '08-full.png')} href="#bt-modal">
+                                <div className="portfolio-hover">
+                                    <div className="portfolio-hover-content">
+                                        <i className="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img className="img-fluid img-fluid-thumbnail" src={require('../../assets/img/portfolio/08-full.png')} alt="" />
+                            </a>
+                            <div className="portfolio-caption">
+                                <h4>COLOMBIANOS EN ESPAÑA</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <Modal id="bt-modal" title={title} image={require(`../../assets/img/portfolio/${image}`)}>
-                {content}
+                {content
+                    .split('\\n')
+                    .map(el => <p>{el}</p>)}
             </Modal>
         </>
     );

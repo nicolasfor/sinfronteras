@@ -36,6 +36,11 @@ body.dark {
   background-color: var(--bg);
   color: var(--textNormal);
   border-color: var(--borderColor);
+
+  .list-group-item-selected {
+    background-color: var(--textNormal);
+    color: var(--bg);
+  }
 }
 
 p {

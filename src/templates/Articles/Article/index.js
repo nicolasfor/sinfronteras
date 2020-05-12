@@ -7,7 +7,7 @@ import Layout from '../../../layouts';
 import useArticles from '../../../modules/articles/useHook';
 import { siteMetadata } from '../../../../gatsby-config';
 
-const Article = ({ pageContext: { article } }) => {
+const Article = ({ pageContext: { article, url } }) => {
     const { _id, title, subtitle, date, picture, imageExtension, content, links } = article;
 
     const { dispatchSetSelected } = useArticles()[1]
@@ -16,11 +16,11 @@ const Article = ({ pageContext: { article } }) => {
         // eslint-disable-next-line 
     }, [])
 
-    const staticPath = imageExtension ? `articles-img/${_id}.${imageExtension}` : null;
-    const photo = imageExtension ? `../../static/${staticPath}` : picture;
+    const staticPath = imageExtension ? `${siteMetadata.siteUrl}static/articles-img/${_id}.${imageExtension}` : null;
+    const photo = imageExtension ? `../../../static/articles-img/${_id}.${imageExtension}` : picture;
 
     return (
-        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photo: staticPath }}>
+        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photo: staticPath, url }}>
             <section className="articles-container">
                 <List />
                 <div className="card articles-content">
@@ -49,7 +49,7 @@ const Article = ({ pageContext: { article } }) => {
                         }
                         <div className="mt-4">
                             <h6>Comparte:</h6>
-                            <Share url={`${siteMetadata.siteUrl}${_id}`} title={title} tags={['ASF']} twitterHandle="@extranjeriaasf" />
+                            <Share url={`${siteMetadata.siteUrl}${url}`} title={title} tags={['ASF']} twitterHandle="@extranjeriaasf" />
                         </div>
                         <div className="mt-4">
                             <h6>Contactanos:</h6>

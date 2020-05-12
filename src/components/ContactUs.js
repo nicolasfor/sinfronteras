@@ -8,10 +8,11 @@ const ContactUs = () => {
     const [alert, { dispatchShowAlert }] = useAlert();
     const [values, setValues] = useState({
         name: '',
+        city: '',
         email: '',
         phone: '',
         message: '',
-        formErrors: { name: null, email: null, phone: null, message: null }
+        formErrors: { city: null, name: null, email: null, phone: null, message: null }
     })
 
     const handleInput = (e) => {
@@ -26,6 +27,17 @@ const ContactUs = () => {
 
         if (!formErrors[fieldName]) {
             switch (fieldName) {
+                case 'message':
+                    {
+                        if (value && value.length > 500) {
+                            value = values.message;
+                            formErrors.message = "El tamaño máximo permitido es de 500 caracteres"
+                        }
+                        else {
+                            formErrors.message = null;
+                        }
+                        break;
+                    }
                 case 'email':
                     {
                         formErrors.email = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? null : ' Email invalido'
@@ -55,9 +67,9 @@ const ContactUs = () => {
                 invalid = true;
         }
         if (!invalid) {
-            const { name, email, phone, message } = values;
+            const { name, city, email, phone, message } = values;
             try {
-                await sendMail(name, phone, email, message)
+                await sendMail({ name, city, phone, email, message })
                 dispatchShowAlert("Enviado Exitosamente. Nos pondremos en contacto");
                 setValues({
                     name: '',
@@ -73,7 +85,7 @@ const ContactUs = () => {
         }
     }
 
-    const { name, email, phone, message, formErrors } = values;
+    const { name, city, email, phone, message, formErrors } = values;
 
     return (
         <div className="row">
@@ -93,10 +105,14 @@ const ContactUs = () => {
                                 <input className="form-control" name="phone" onChange={handleInput} onBlur={() => validateField('phone', phone)} type="tel" placeholder="Tu teléfono *" required="required" value={phone} />
                                 <p className="help-block text-danger">{formErrors.phone}</p>
                             </div>
+                            <div className="form-group">
+                                <input className="form-control" name="ciudad" onChange={handleInput} onBlur={() => validateField('city', phone)} type="text" placeholder="Tu ciudad *" required="required" value={city} />
+                                <p className="help-block text-danger">{formErrors.phone}</p>
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
-                                <textarea className="form-control" name="message" onChange={handleInput} onBlur={() => validateField('message', message)} placeholder="Tu mensaje *" required="required" value={message}></textarea>
+                                <textarea className="form-control" name="message" onChange={handleInput} onBlur={() => validateField('message', message)} placeholder="Tu consulta *" required="required" value={message}></textarea>
                                 <p className="help-block text-danger">{formErrors.message}</p>
                             </div>
                         </div>

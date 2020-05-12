@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby"
+import { normalizeString } from '../util'
 
 const Carousel = ({ id, content }) => {
 
@@ -9,13 +10,14 @@ const Carousel = ({ id, content }) => {
                 {content.map((el, index) => <li key={index} data-target={`#${id}`} data-slide-to={index} className={index === 0 ? 'active' : ''}></li>)}
             </ol>
             <div className="carousel-inner">
-                {content.map(({ _id, title, subtitle }, index) => (
+                {content.map(({ _id, title, category, subtitle }, index) => (
                     <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <h5 className="mb-1 title">{title}</h5>
                         <p className="mb-1 subtitle">{subtitle}</p>
                         <div className="carousel-caption">
-                            <Link to={`/${_id}`}>
+                            <Link
+                                to={`/categories/${normalizeString(category)}/${normalizeString(title)}`}>
                                 <button className="btn btn-primary ">
                                     Ver más
                                     <i className="ml-1 fa fa-search"></i>

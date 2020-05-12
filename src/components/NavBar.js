@@ -52,13 +52,13 @@ const NavBar = ({ hideButtons }) => {
                             <li className="nav-item">
                                 <Scroll type="id" element="start" onClick={hideMenu}>
                                     {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Quienes somos</a>
+                                    <a className="nav-link js-scroll-trigger" href="#">Conocenos</a>
                                 </Scroll>
                             </li>
                             <li className="nav-item">
                                 <Scroll type="id" element="services" onClick={hideMenu}>
                                     {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Que hacemos</a>
+                                    <a className="nav-link js-scroll-trigger" href="#">Nuestros Servicios</a>
                                 </Scroll>
                             </li>
 
@@ -71,7 +71,7 @@ const NavBar = ({ hideButtons }) => {
                             <li className="nav-item">
                                 <Scroll type="id" element="contact" onClick={hideMenu}>
                                     {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Contacto</a>
+                                    <a className="nav-link js-scroll-trigger" href="#">Consulta Gratuita</a>
                                 </Scroll>
                             </li>
                             <ThemeToggler>

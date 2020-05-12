@@ -13,6 +13,8 @@ exports.components = {
   "component---src-pages-sections-section-contact-js": () => import("./../src/pages/Sections/SectionContact.js" /* webpackChunkName: "component---src-pages-sections-section-contact-js" */),
   "component---src-pages-sections-section-team-js": () => import("./../src/pages/Sections/SectionTeam.js" /* webpackChunkName: "component---src-pages-sections-section-team-js" */),
   "component---src-pages-sections-section-we-do-js": () => import("./../src/pages/Sections/SectionWeDo.js" /* webpackChunkName: "component---src-pages-sections-section-we-do-js" */),
-  "component---src-templates-articles-article-index-js": () => import("./../src/templates/Articles/Article/index.js" /* webpackChunkName: "component---src-templates-articles-article-index-js" */)
+  "component---src-templates-articles-article-index-js": () => import("./../src/templates/Articles/Article/index.js" /* webpackChunkName: "component---src-templates-articles-article-index-js" */),
+  "component---src-templates-articles-articles-index-js": () => import("./../src/templates/Articles/Articles/index.js" /* webpackChunkName: "component---src-templates-articles-articles-index-js" */),
+  "component---src-templates-articles-categories-index-js": () => import("./../src/templates/Articles/Categories/index.js" /* webpackChunkName: "component---src-templates-articles-categories-index-js" */)
 }
 

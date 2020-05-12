@@ -23,20 +23,21 @@ const SectionArticles = () => {
         return null;
     }
     return (
-        <section className="page-section" id="articles">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <h2 className="section-heading text-uppercase">Nuestros Artículos</h2>
+        <section className="articles-container" id="articles">
+            <ArticlesList />
+            <div className="card articles-content">
+                <div className="card-body">
+                    <div className="row">
+                        <div className="col-lg-12 text-center">
+                            <h2 className="section-heading text-uppercase">Nuestros Artículos</h2>
+                        </div>
                     </div>
+                    <label className="articles-label-border"> Los más Recientes</label>
+                    <Carousel id="mostRecent" content={mostRecent} />
+                    <label className="articles-label-border mt-3"> Los más vistos</label>
+                    <Ads />
+                    <Carousel id="mostVisited" content={mostVisited} />
                 </div>
-                <label className="articles-label-border"> Los más Recientes</label>
-                <Carousel id="mostRecent" content={mostRecent} />
-                <label className="articles-label-border mt-3"> Los más vistos</label>
-                <Ads />
-                <Carousel id="mostVisited" content={mostVisited} />
-                <label className="articles-label-border mt-3"> Todos</label>
-                <ArticlesList />
             </div>
         </section>
     );

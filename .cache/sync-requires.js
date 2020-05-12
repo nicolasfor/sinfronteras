@@ -16,6 +16,8 @@ exports.components = {
   "component---src-pages-sections-section-contact-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Sections/SectionContact.js"))),
   "component---src-pages-sections-section-team-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Sections/SectionTeam.js"))),
   "component---src-pages-sections-section-we-do-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Sections/SectionWeDo.js"))),
-  "component---src-templates-articles-article-index-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/templates/Articles/Article/index.js")))
+  "component---src-templates-articles-article-index-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/templates/Articles/Article/index.js"))),
+  "component---src-templates-articles-articles-index-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/templates/Articles/Articles/index.js"))),
+  "component---src-templates-articles-categories-index-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/templates/Articles/Categories/index.js")))
 }
 

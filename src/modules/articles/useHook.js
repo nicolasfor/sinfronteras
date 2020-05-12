@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import api from '../../util';
+import { api } from '../../util';
 import {
     loadMostVisited,
     loadMostRecent,
@@ -20,7 +20,7 @@ const useArticles = () => {
     };
 
     const dispatchClearSelected = async () => {
-        dispatch(setSelected(null))
+        dispatch(setSelected(null));
     };
     const dispatchLoadMostVisited = async () => {
         if (_articles.mostVisited.length === 0) {
@@ -30,14 +30,19 @@ const useArticles = () => {
     };
     const dispatchLoadMostRecent = async () => {
         if (_articles.mostRecent.length === 0) {
-            const docs = await api().fetchMostRecent();
-            dispatch(loadMostRecent(docs))
+            try {
+                const docs = await api().fetchMostRecent();
+                dispatch(loadMostRecent(docs))
+            }
+            catch (error) {
+
+            }
         }
     };
 
     const dispatchLoadArticlesByCategory = async (categoryId) => {
         try {
-            const docs = await api().fetchArticlesByCategory(categoryId);
+            const docs = await api().fetchArticlesByCategory(categoryId, _articles.categories[categoryId].name);
             dispatch(loadArticles(docs))
         }
         catch (error) {
