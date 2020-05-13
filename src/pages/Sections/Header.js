@@ -1,11 +1,11 @@
 import React from 'react';
-import Scroll from '../../components/Scroll';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Header = () => {
 
     return (
         <>
-            <header className="masthead">
+            <header className="masthead" id="header">
                 <div className="presentation ">
                     <div className="presentation-left"></div>
                     <div className="presentation-right"></div>
@@ -14,10 +14,12 @@ const Header = () => {
                         <div className="intro-lead-in">
                             La profesión legal es, por definición, una práctica: la competencia se obtiene y se mantiene solo a través del aprendizaje continuo.
                         </div>
-                        <Scroll type="id" element="articles">
-                            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#">Cuentame más</a>
-                        </Scroll>
+                        <AnchorLink
+                            to="/#articles"
+                            title="Cuentame más"
+                            className="btn btn-primary btn-xl text-uppercase"
+                            stripHash
+                        />
                     </div>
                 </div>
             </header>

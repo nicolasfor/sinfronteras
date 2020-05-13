@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Scrollspy from 'react-scrollspy'
-import Scroll from './Scroll';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from 'gatsby';
 import Overlay from './Overlay';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
@@ -22,14 +21,19 @@ const NavBar = ({ hideButtons }) => {
                     <>
                         <img className="logo-img" src={require('../assets/img/logos/main.png')} alt="" />
                         {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        <Link className="navbar-brand js-scroll-trigger" to="/">Abogados Sin Frontera</Link>
+                        <AnchorLink
+                            to="/#header"
+                            title="Abogados Sin Frontera"
+                            className="navbar-brand"
+                            stripHash
+                        />
                     </>
                 </div>
                 {hideButtons ?
                     <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
                         <ul className="navbar-nav text-uppercase ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link js-scroll-trigger" to="/">Inicio</Link>
+                                <Link className="nav-link" to="/">Inicio</Link>
                             </li>
                             <ThemeToggler>
                                 {({ theme, toggleTheme }) => (
@@ -42,37 +46,47 @@ const NavBar = ({ hideButtons }) => {
                     </div>
                     :
                     <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
-                        <Scrollspy className="navbar-nav text-uppercase ml-auto" items={['articles', 'start', 'services', 'team', 'contact']} currentClassName="active">
+                        <ul className="navbar-nav text-uppercase ml-auto">
                             <li className="nav-item">
-                                <Scroll type="id" element="articles" onClick={hideMenu}>
-                                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Articulos</a>
-                                </Scroll>
+                                <AnchorLink
+                                    to="/#articles"
+                                    title="Articulos"
+                                    className="nav-link"
+                                    stripHash
+                                />
                             </li>
                             <li className="nav-item">
-                                <Scroll type="id" element="start" onClick={hideMenu}>
-                                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Conocenos</a>
-                                </Scroll>
+                                <AnchorLink
+                                    to="/#start"
+                                    title="Conocenos"
+                                    className="nav-link"
+                                    stripHash
+                                />
                             </li>
                             <li className="nav-item">
-                                <Scroll type="id" element="services" onClick={hideMenu}>
-                                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Nuestros Servicios</a>
-                                </Scroll>
+                                <AnchorLink
+                                    to="/#services"
+                                    title="Nuestros Servicios"
+                                    className="nav-link"
+                                    stripHash
+                                />
                             </li>
 
                             <li className="nav-item">
-                                <Scroll type="id" element="team" onClick={hideMenu}>
-                                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Equipo</a>
-                                </Scroll>
+                                <AnchorLink
+                                    to="/#team"
+                                    title="Equipo"
+                                    className="nav-link"
+                                    stripHash
+                                />
                             </li>
                             <li className="nav-item">
-                                <Scroll type="id" element="contact" onClick={hideMenu}>
-                                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                    <a className="nav-link js-scroll-trigger" href="#">Consulta Gratuita</a>
-                                </Scroll>
+                                <AnchorLink
+                                    to="/#contact"
+                                    title="Consulta Gratuita"
+                                    className="nav-link"
+                                    stripHash
+                                />
                             </li>
                             <ThemeToggler>
                                 {({ theme, toggleTheme }) => (
@@ -82,7 +96,7 @@ const NavBar = ({ hideButtons }) => {
                                 )}
                             </ThemeToggler>
 
-                        </Scrollspy>
+                        </ul>
                     </div>
                 }
             </div>

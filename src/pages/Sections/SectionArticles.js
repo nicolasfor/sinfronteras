@@ -23,7 +23,7 @@ const SectionArticles = () => {
         return null;
     }
     return (
-        <section className="articles-container" id="articles">
+        <section className="page-section articles-container" id="articles">
             <ArticlesList />
             <div className="card articles-content">
                 <div className="card-body">

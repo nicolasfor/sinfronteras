@@ -67,6 +67,12 @@ module.exports = {
         },
         {
             resolve: `gatsby-plugin-dark-mode`
+        },
+        {
+            resolve: `gatsby-plugin-anchor-links`,
+            options: {
+                offset: 0
+            }
         }
     ]
 }
