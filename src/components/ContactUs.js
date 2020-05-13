@@ -92,7 +92,7 @@ const ContactUs = () => {
         <div className="row">
             <div className="col-lg-12">
                 <form onSubmit={handleSubmit}>
-                    <div className="row">
+                    <div className="row contact">
                         <div className="col-md-6">
                             <div className="form-group">
                                 <input className="form-control" name="name" onChange={handleInput} onBlur={() => validateField('name', name)} type="text" placeholder="Tu nombre *" required="required" value={name} />

@@ -21,7 +21,7 @@ const Article = ({ pageContext: { article, url } }) => {
 
     return (
         <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photoPath, url }}>
-            <section className="articles-container">
+            <section className="articles-container pt-4">
                 <List />
                 <div className="card articles-content">
                     <div className="card-body">

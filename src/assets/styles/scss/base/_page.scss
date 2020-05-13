@@ -1,4 +1,5 @@
 body {
+  min-height: 100vh;
   overflow-x: hidden;
   @include body-font;
   padding-top: 65px;
@@ -12,6 +13,7 @@ body {
 
 // Global styling for this template
 body.dark {
+  min-height: 100vh;
   overflow-x: hidden;
   @include body-font;
   padding-top: 65px;
@@ -71,6 +73,7 @@ h6 {
 
 .page-section {
   padding: 80px 0;
+
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -108,4 +111,8 @@ img::-moz-selection {
 
 .fixed-top {
   z-index: 600 !important;
+}
+
+.root {
+  min-height: 100vh;
 }

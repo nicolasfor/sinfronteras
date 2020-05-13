@@ -6,7 +6,7 @@ import Alert from '../components/Alert'
 const Layout = ({ children, navProps, seoProps }) => {
 
     return (
-        <div style={{
+        <div className="root" style={{
             backgroundColor: 'var(--bg)',
             color: 'var(--textNormal)',
             transition: 'color 0.2s ease-out, background 0.2s ease-out',

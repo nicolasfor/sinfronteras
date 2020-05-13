@@ -27,7 +27,7 @@ const Titles = () => {
                             key={_id}
                             className={`list-group-item list-group-item-action ${selected === _id ? 'list-group-item-selected' : ''}`}
                             to={`/categories/${normalizeString(category)}/${normalizeString(title)}`}>
-                            <h5 className="mb-1">{title}</h5>
+                            <h6 className="mb-1">{title}</h6>
                             <p className="mb-1">{subtitle}</p>
                         </Link>
                     )

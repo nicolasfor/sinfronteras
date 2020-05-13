@@ -1,10 +1,6 @@
 // Styling for the contact section
-section#contact {
-  background-color: $gray-900;
-  background-image: url('../../img/map-image.png');
-  background-repeat: no-repeat;
-  background-position: center;
-
+section#contact,
+.contact {
   .section-heading {
     color: $white;
   }
@@ -62,4 +58,11 @@ section#contact {
     align-items: center;
     margin-bottom: 60px;
   }
+}
+
+.contact-background {
+  background-color: $gray-900;
+  background-image: url('../../img/map-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }

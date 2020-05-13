@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from "gatsby";
 import Carousel from '../../components/Carousel';
 import Ads from '../../components/Ads';
 import ArticlesList from '../Articles/List/index'
@@ -37,6 +38,12 @@ const SectionArticles = () => {
                     <label className="articles-label-border mt-3"> Los más vistos</label>
                     <Ads />
                     <Carousel id="mostVisited" content={mostVisited} />
+                    <Link
+                        to="/categories">
+                        <button className="btn btn-primary btn-block mt-3">
+                            Ver Todos
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

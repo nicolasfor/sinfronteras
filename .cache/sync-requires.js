@@ -5,6 +5,7 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
+  "component---src-pages-404-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/404.js"))),
   "component---src-pages-articles-list-categories-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Articles/List/Categories.js"))),
   "component---src-pages-articles-list-index-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Articles/List/index.js"))),
   "component---src-pages-articles-list-titles-js": hot(preferDefault(require("/Users/nicolasfor/Documents/Juridica/sinfronteras-React/src/pages/Articles/List/Titles.js"))),

@@ -5,7 +5,7 @@ import Ads from '../../components/Ads';
 const SectionContact = () => {
 
     return (
-        <section className="page-section" id="contact">
+        <section className="page-section contact-background" id="contact">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
