@@ -150,7 +150,7 @@ const SectionWeDo = () => {
             <Modal id="bt-modal" title={title} image={require(`../../assets/img/portfolio/${image}`)}>
                 {content
                     .split('\\n')
-                    .map(el => <p>{el}</p>)}
+                    .map((el, key) => <p key={key}>{el}</p>)}
             </Modal>
         </>
     );

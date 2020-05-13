@@ -50,7 +50,7 @@ const NavBar = ({ hideButtons }) => {
                             <li className="nav-item">
                                 <AnchorLink
                                     to="/#articles"
-                                    title="Articulos"
+                                    title="Artículos"
                                     className="nav-link"
                                     stripHash
                                 />

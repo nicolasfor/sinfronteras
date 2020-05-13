@@ -20,7 +20,7 @@ const Modal = ({ id, title, image, children }) => {
                                             <img className="img-fluid d-block mx-auto" src={image} alt="" />
                                         </div>
                                         <div className="col-md-6">
-                                            <p>{children}</p>
+                                            {children}
                                         </div>
                                     </div>
                                 </div>

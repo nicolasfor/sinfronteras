@@ -73,10 +73,11 @@ const ContactUs = () => {
                 dispatchShowAlert("Enviado Exitosamente. Nos pondremos en contacto");
                 setValues({
                     name: '',
+                    city: '',
                     email: '',
                     phone: '',
                     message: '',
-                    formErrors: { name: null, email: null, phone: null, message: null }
+                    formErrors: { name: null, city: null, email: null, phone: null, message: null }
                 })
             }
             catch (error) {
@@ -106,8 +107,8 @@ const ContactUs = () => {
                                 <p className="help-block text-danger">{formErrors.phone}</p>
                             </div>
                             <div className="form-group">
-                                <input className="form-control" name="ciudad" onChange={handleInput} onBlur={() => validateField('city', phone)} type="text" placeholder="Tu ciudad *" required="required" value={city} />
-                                <p className="help-block text-danger">{formErrors.phone}</p>
+                                <input className="form-control" name="city" onChange={handleInput} onBlur={() => validateField('city', city)} type="text" placeholder="Tu ciudad *" required="required" value={city} />
+                                <p className="help-block text-danger">{formErrors.city}</p>
                             </div>
                         </div>
                         <div className="col-md-6">
