@@ -16,11 +16,11 @@ const Article = ({ pageContext: { article, url } }) => {
         // eslint-disable-next-line 
     }, [])
 
-    const staticPath = imageExtension ? `${siteMetadata.siteUrl}static/articles-img/${_id}.${imageExtension}` : null;
-    const photo = imageExtension ? `../../../static/articles-img/${_id}.${imageExtension}` : picture;
+    const photoPath = imageExtension ? `static/articles-img/${_id}.${imageExtension}` : null;
+    const photo = imageExtension ? `../../../${photoPath}` : picture;
 
     return (
-        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photo: staticPath, url }}>
+        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photoPath, url }}>
             <section className="articles-container">
                 <List />
                 <div className="card articles-content">

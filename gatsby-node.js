@@ -26,11 +26,11 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
         for (const article of Object.values(articles)) {
             const articleFull = await fetchArticleById(article._id);
-            const path = `/categories/${normalizeString(category.name)}/${normalizeString(article.title)}`;
+            const url = `categories/${normalizeString(category.name)}/${normalizeString(article.title)}`;
             createPage({
-                path,
+                path: `/${url}`,
                 component: require.resolve('./src/templates/Articles/Article'),
-                context: { article: articleFull, url: path }
+                context: { article: articleFull, url }
             });
         }
     }
