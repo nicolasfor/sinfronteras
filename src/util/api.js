@@ -65,30 +65,12 @@ const api = () => {
             return docs.map(doc => ({ ...doc, _id: String(doc._id.$oid) }));
         };
 
-        const fetchArticlesByString = async (str) => {
+        const fetchArticlesByString = async (text) => {
             await loginStitch();
-            const docs = await db.collection('articles')
-                .find(
-                    {
-                        $or: [
-                            { "title": new RegExp(str, "i") },
-                            { "content": new RegExp(str, "i") },
-                        ]
-                    },
-                    {
-                        projection: {
-                            title: 1,
-                            subtitle: 1
-                        },
-                        sort: {
-                            views: -1
-                        },
-                        limit: 20
-                    })
-                .asArray();
-            const obj = {}
+            const docs = await post('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/asf-ewvhw/service/Queries/incoming_webhook/fetchArticlesByString', { text })
+            const obj = {};
             docs.forEach((doc) => {
-                obj[doc._id] = { ...doc, _id: String(doc._id) }
+                obj[String(doc._id.$oid)] = { ...doc, _id: String(doc._id.$oid) }
             })
             return obj;
         };

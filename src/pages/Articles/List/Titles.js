@@ -18,9 +18,6 @@ const Titles = () => {
             </button>
             <ul className="list-group">
                 {Object.values(list).map(({ _id, title, category, subtitle }) => {
-                    console.log('_id: ', _id);
-                    console.log('selected: ', selected);
-                    console.log('selected === _id : ', selected === _id );
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     return (
                         <Link
