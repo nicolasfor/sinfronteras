@@ -7,7 +7,7 @@ import { normalizeString } from '../../../util';
 const Articles = ({ pageContext: { articles, category } }) => {
     return (
 
-        <Layout navProps={{ hideButtons: true }} seoProps={{ title: category, description: `Articulos de la categoria ${category}` }}>
+        <Layout navProps={{ showStart: true }} seoProps={{ title: category, description: `Articulos de la categoria ${category}` }}>
             <Ads />
             <section className="articles-container d-block pt-4">
                 <div className="card articles-content">

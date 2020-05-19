@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Overlay from './Overlay';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
-const NavBar = ({ hideButtons }) => {
+const NavBar = ({ showStart }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const hideMenu = () => {
         setIsExpanded(!isExpanded);
@@ -29,76 +29,72 @@ const NavBar = ({ hideButtons }) => {
                         />
                     </>
                 </div>
-                {hideButtons ?
-                    <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
-                        <ul className="navbar-nav text-uppercase ml-auto">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">Inicio</Link>
-                            </li>
-                            <ThemeToggler>
-                                {({ theme, toggleTheme }) => (
-                                    <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-                                        <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
-                                    </li>
-                                )}
-                            </ThemeToggler>
-                        </ul>
-                    </div>
-                    :
-                    <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
-                        <ul className="navbar-nav text-uppercase ml-auto">
+
+                <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
+                    <ul className="navbar-nav text-uppercase ml-auto">
+                        {
+                            showStart &&
                             <li className="nav-item">
                                 <AnchorLink
-                                    to="/#articles"
-                                    title="Artículos"
-                                    className="nav-link"
-                                    stripHash
-                                />
-                            </li>
-                            <li className="nav-item">
-                                <AnchorLink
-                                    to="/#start"
-                                    title="Conocenos"
-                                    className="nav-link"
-                                    stripHash
-                                />
-                            </li>
-                            <li className="nav-item">
-                                <AnchorLink
-                                    to="/#services"
-                                    title="Nuestros Servicios"
+                                    to="/"
+                                    title="Inicio"
                                     className="nav-link"
                                     stripHash
                                 />
                             </li>
 
-                            <li className="nav-item">
-                                <AnchorLink
-                                    to="/#team"
-                                    title="Equipo"
-                                    className="nav-link"
-                                    stripHash
-                                />
-                            </li>
-                            <li className="nav-item">
-                                <AnchorLink
-                                    to="/#contact"
-                                    title="Consulta Gratuita"
-                                    className="nav-link"
-                                    stripHash
-                                />
-                            </li>
-                            <ThemeToggler>
-                                {({ theme, toggleTheme }) => (
-                                    <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-                                        <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
-                                    </li>
-                                )}
-                            </ThemeToggler>
+                        }
+                        <li className="nav-item">
+                            <AnchorLink
+                                to="/#articles"
+                                title="Artículos"
+                                className="nav-link"
+                                stripHash
+                            />
+                        </li>
+                        <li className="nav-item">
+                            <AnchorLink
+                                to="/#start"
+                                title="Conocenos"
+                                className="nav-link"
+                                stripHash
+                            />
+                        </li>
+                        <li className="nav-item">
+                            <AnchorLink
+                                to="/#services"
+                                title="Nuestros Servicios"
+                                className="nav-link"
+                                stripHash
+                            />
+                        </li>
 
-                        </ul>
-                    </div>
-                }
+                        <li className="nav-item">
+                            <AnchorLink
+                                to="/#team"
+                                title="Equipo"
+                                className="nav-link"
+                                stripHash
+                            />
+                        </li>
+                        <li className="nav-item">
+                            <AnchorLink
+                                to="/#contact"
+                                title="Consulta Gratuita"
+                                className="nav-link"
+                                stripHash
+                            />
+                        </li>
+                        <ThemeToggler>
+                            {({ theme, toggleTheme }) => (
+                                <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                                    <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
+                                </li>
+                            )}
+                        </ThemeToggler>
+
+                    </ul>
+                </div>
             </div>
             {
                 isExpanded &&

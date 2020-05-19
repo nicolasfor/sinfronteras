@@ -20,7 +20,7 @@ const Article = ({ pageContext: { article, url } }) => {
     const photo = imageExtension ? `../../../${photoPath}` : picture;
 
     return (
-        <Layout navProps={{ hideButtons: true }} seoProps={{ title, description: subtitle, _id, photoPath, url }}>
+        <Layout navProps={{ showStart: true }} seoProps={{ title, description: subtitle, _id, photoPath, url }}>
             <section className="articles-container pt-4">
                 <List />
                 <div className="card articles-content">

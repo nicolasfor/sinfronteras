@@ -53,14 +53,12 @@ const api = () => {
 
         const fetchMostVisited = async () => {
             await loginStitch();
-            //const docs = await client.callFunction('getMostVisited');
             const docs = await post('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/asf-ewvhw/service/Queries/incoming_webhook/mostVisited')
             return docs.map(doc => ({ ...doc, _id: String(doc._id.$oid) }));
         };
 
         const fetchMostRecent = async () => {
             await loginStitch();
-            //const docs = await client.callFunction('getMostRecent');
             const docs = await post('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/asf-ewvhw/service/Queries/incoming_webhook/mostRecent')
             return docs.map(doc => ({ ...doc, _id: String(doc._id.$oid) }));
         };

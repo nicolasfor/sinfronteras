@@ -8,7 +8,7 @@ const Categories = ({ pageContext: { categories } }) => {
 
     return (
 
-        <Layout navProps={{ hideButtons: true }} seoProps={{ title: "Categorias", description: "Todas las categorias de nuestros articulos" }}>
+        <Layout navProps={{ showStart: true }} seoProps={{ title: "Categorias", description: "Todas las categorias de nuestros articulos" }}>
             <Ads />
             <section className="articles-container d-block pt-4">
                 <div className="card articles-content">
