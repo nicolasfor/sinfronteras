@@ -36,7 +36,7 @@ const Article = ({ pageContext: { article, url } }) => {
                             </>}
                         <Ads />
                         {content &&
-                            content.split('\\n').map((text, index) => <p key={index} className="card-text">{text}</p>)
+                            content.split('\\n').map((text, index) => <p key={index} className="card-text" dangerouslySetInnerHTML={{ __html: text }} />)
                         }
                         {
                             links && links.length > 0 &&
