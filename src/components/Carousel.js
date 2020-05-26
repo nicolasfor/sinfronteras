@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "gatsby"
 import { normalizeString } from '../util'
 
@@ -20,7 +21,7 @@ const Carousel = ({ id, content }) => {
                                 to={`/categories/${normalizeString(category)}/${normalizeString(title)}`}>
                                 <button className="btn btn-primary ">
                                     Ver más
-                                    <i className="ml-1 fa fa-search"></i>
+                                    <FontAwesomeIcon className="ml-1" icon="search" />
                                 </button>
                             </Link>
                         </div>

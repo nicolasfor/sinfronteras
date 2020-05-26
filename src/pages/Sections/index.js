@@ -3,7 +3,7 @@ import Header from './Header'
 import Intro from './Intro'
 import SectionWeDo from './SectionWeDo'
 import SectionArticles from './SectionArticles'
-import SectionTeam from './SectionTeam'
+// import SectionTeam from './SectionTeam'
 import SectionContact from './SectionContact'
 import Ads from '../../components/Ads';
 
@@ -16,8 +16,8 @@ const Sections = () => {
             <Intro />
             <Ads />
             <SectionWeDo />
-            <Ads />
-            <SectionTeam />
+            {/* <Ads />
+            <SectionTeam /> */}
             <Ads />
             <SectionContact />
             <Ads />

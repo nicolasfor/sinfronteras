@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Overlay from './Overlay';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
@@ -16,7 +16,7 @@ const NavBar = ({ showStart }) => {
                 <div className="navbar-header">
                     <button className="navbar-toggler navbar-toggler-right" type="button" onClick={hideMenu}>
                         Menu
-                        <i className="fa fa-bars"></i>
+                        <FontAwesomeIcon icon="bars" />
                     </button>
                     <>
                         <img className="logo-img" src={require('../assets/img/logos/main.png')} alt="" />
@@ -69,14 +69,14 @@ const NavBar = ({ showStart }) => {
                             />
                         </li>
 
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <AnchorLink
                                 to="/#team"
                                 title="Equipo"
                                 className="nav-link"
                                 stripHash
                             />
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <AnchorLink
                                 to="/#contact"

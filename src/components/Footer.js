@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
     return (
@@ -12,22 +13,22 @@ const Footer = () => {
                         <ul className="list-inline social-buttons">
                             <li className="list-inline-item">
                                 <a href="https://www.facebook.com/Abogados-Sin-Frontera-108432887268111/">
-                                    <i className="fa fa-facebook-f"></i>
+                                    <FontAwesomeIcon icon={['fab', 'facebook']} />
                                 </a>
                             </li>
                             <li className="list-inline-item">
                                 <a href="https://www.instagram.com/abogadossinfronteraes/">
-                                    <i className="fa fa-instagram"></i>
+                                    <FontAwesomeIcon icon={['fab', 'instagram']} />
                                 </a>
                             </li>
                             <li className="list-inline-item">
                                 <a href="https://twitter.com/extranjeriaasf/">
-                                    <i className="fa fa-twitter"></i>
+                                    <FontAwesomeIcon icon={['fab', 'twitter']} />
                                 </a>
                             </li>
                             <li className="list-inline-item">
                                 <a href="https://www.linkedin.com/in/paola-milena-galindo-a5264b154/">
-                                    <i className="fa fa-linkedin"></i>
+                                    <FontAwesomeIcon icon={['fab', 'linkedin']} />
                                 </a>
                             </li>
                         </ul>

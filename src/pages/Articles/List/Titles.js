@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useArticles from '../../../modules/articles/useHook';
 //import { useHistory } from "react-router-dom";
 import { Link } from "gatsby"
@@ -14,7 +15,7 @@ const Titles = () => {
     return (
         <>
             <button className="btn btn-primary btn-lg btn-block" onClick={handleClick}>
-                <i className="fa fa-arrow-left"></i>
+                <FontAwesomeIcon className="ml-1" icon="arrow-left" />
             </button>
             <ul className="list-group">
                 {Object.values(list).map(({ _id, title, category, subtitle }) => {

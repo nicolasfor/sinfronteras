@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useArticles from '../../../modules/articles/useHook';
 import Categories from './Categories';
 import Titles from './Titles';
@@ -35,7 +36,7 @@ const List = () => {
                     <input onKeyDown={handleKeyDown} onChange={onChange} type="text" className="form-control" id="inlineFormInputGroup" placeholder="Buscar artículo..." />
                     <div className="input-group-append">
                         <div className="input-group-text" onClick={submit}>
-                            <i className="fa fa-search"></i>
+                            <FontAwesomeIcon icon="search" />
                         </div>
                     </div>
                 </div>

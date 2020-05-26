@@ -15,19 +15,6 @@ const SectionContact = () => {
                 </div>
                 <ContactUs />
                 <Ads />
-                <div className="call-us mt-5">
-                    <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <h2 className="section-heading text-uppercase">Ó Llamanos</h2>
-                            <h3 className="section-subheading text-muted">Y te asistiremos lo antes posible</h3>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="clickme-button web_btn" id="clickme-button" data-key="paola-galindo"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     );
