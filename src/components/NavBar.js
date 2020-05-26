@@ -88,7 +88,9 @@ const NavBar = ({ showStart }) => {
                         <ThemeToggler>
                             {({ theme, toggleTheme }) => (
                                 <li className="nav-item" onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-                                    <i className={`fa ${theme === 'light' ? 'fa-moon-o text-light' : 'fa-sun-o'}`}></i>
+                                    <FontAwesomeIcon
+                                        className={theme === 'light' ? "text-light" : ""}
+                                        icon={theme === 'light' ? 'moon' : 'sun'} />
                                 </li>
                             )}
                         </ThemeToggler>
